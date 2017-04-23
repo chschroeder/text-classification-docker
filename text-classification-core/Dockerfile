@@ -31,6 +31,7 @@ RUN pip install pandas \
                 scikit-learn \
                 bayesian-optimization \
                 pyxDamerauLevenshtein \
-                spacy
+                spacy \
+                memory_profiler
 
 CMD ["bash"]
