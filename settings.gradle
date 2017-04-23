@@ -1,0 +1,4 @@
+include 'text-classification-core'
+include 'text-classification-plotting'
+
+rootProject.name = 'text-classification-docker'
