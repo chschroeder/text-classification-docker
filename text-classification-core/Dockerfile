@@ -2,12 +2,7 @@ FROM python:3.6.1
 
 USER root
 
-RUN wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-RUN bash miniconda.sh -p /miniconda -b && rm miniconda.sh
-ENV PATH /miniconda/bin:$PATH
-
-RUN conda update -y conda
-RUN conda install numpy \
+RUN pip install numpy \
         scipy
 
 RUN apt-get update \ 
@@ -23,7 +18,7 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd python-package; python setup.py install
 
 
-RUN pip install pandas \
+RUN pip install pandas==0.19.2 \
                 gensim \
                 nltk \
                 stop-words \
@@ -31,7 +26,7 @@ RUN pip install pandas \
                 scikit-learn \
                 bayesian-optimization \
                 pyxDamerauLevenshtein \
-                spacy \
-                memory_profiler
+                spacy==1.7.5 \
+                memory_profiler==0.45
 
 CMD ["bash"]

@@ -1,5 +1,1 @@
-subprojects {
-    task docker(type: Exec) {
-        commandLine 'docker', 'build', '.', '-t', version
-    }
-}
+// empty
