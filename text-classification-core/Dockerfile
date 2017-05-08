@@ -27,6 +27,10 @@ RUN pip install pandas==0.19.2 \
                 bayesian-optimization \
                 pyxDamerauLevenshtein \
                 spacy==1.7.5 \
+                datasketch==1.2.0 \
+                psutil==5.2.2 \
                 memory_profiler==0.45
+
+RUN pip install scikit-optimize==0.3
 
 CMD ["bash"]
