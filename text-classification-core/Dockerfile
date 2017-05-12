@@ -10,7 +10,10 @@ RUN apt-get update \
         git \
         make \
         g++ \
-        gcc
+        gcc \
+        python-dev \
+        python3-dev \
+        libyaml-dev
 
 RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd xgboost \
@@ -29,8 +32,9 @@ RUN pip install pandas==0.19.2 \
                 spacy==1.7.5 \
                 datasketch==1.2.0 \
                 psutil==5.2.2 \
-                memory_profiler==0.45
-
-RUN pip install scikit-optimize==0.3
+                memory_profiler==0.45 \
+                ruamel.yaml==0.14.11 \
+                scikit-optimize==0.3 \
+                pyemd==0.4.2
 
 CMD ["bash"]
