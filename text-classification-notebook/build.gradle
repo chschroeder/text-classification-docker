@@ -1,0 +1,3 @@
+task docker(type: Exec) {
+    commandLine 'docker', 'build', '.', '-t', project.name + ':' + version
+}
