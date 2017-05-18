@@ -1,5 +1,9 @@
 FROM python:3.6.1
 
+ENV CORE_USER primo 
+
+RUN useradd -ms /bin/bash ${CORE_USER}
+
 USER root
 
 RUN pip install numpy \
@@ -21,7 +25,7 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd python-package; python setup.py install
 
 
-RUN pip install pandas==0.19.2 \
+RUN pip install pandas==0.20.0 \
                 gensim \
                 nltk \
                 stop-words \
@@ -36,5 +40,8 @@ RUN pip install pandas==0.19.2 \
                 ruamel.yaml==0.14.11 \
                 scikit-optimize==0.3 \
                 pyemd==0.4.2
+
+RUN chmod -R 777 /usr/local/lib/python3.6/site-packages
+RUN chmod -R 777 /usr/local/lib/python3.6/site-packages/spacy
 
 CMD ["bash"]
