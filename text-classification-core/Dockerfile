@@ -25,12 +25,12 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd python-package; python setup.py install
 
 
-RUN pip install pandas==0.20.0 \
+RUN pip install pandas==0.20.3 \
                 gensim \
                 nltk \
                 stop-words \
                 PyStemmer \
-                scikit-learn \
+                scikit-learn==0.18.1 \
                 bayesian-optimization \
                 pyxDamerauLevenshtein \
                 spacy==1.7.5 \
