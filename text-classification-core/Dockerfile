@@ -39,7 +39,9 @@ RUN pip install pandas==0.20.0 \
                 memory_profiler==0.45 \
                 ruamel.yaml==0.14.11 \
                 scikit-optimize==0.3 \
-                pyemd==0.4.2
+                pyemd==0.4.2 \
+                rep==0.6.6 \
+                sacred==0.7.0
 
 RUN chmod -R 777 /usr/local/lib/python3.6/site-packages
 RUN chmod -R 777 /usr/local/lib/python3.6/site-packages/spacy

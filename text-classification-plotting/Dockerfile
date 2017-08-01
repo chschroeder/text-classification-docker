@@ -1,4 +1,4 @@
-FROM text-classification-core:0.3.1
+FROM text-classification-core:0.3.2
 
 USER root
 
