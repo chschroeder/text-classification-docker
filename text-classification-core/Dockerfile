@@ -15,6 +15,7 @@ RUN apt-get update \
         make \
         g++ \
         gcc \
+        build-essential \
         python-dev \
         python3-dev \
         libyaml-dev
@@ -25,7 +26,8 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd python-package; python setup.py install
 
 
-RUN pip install pandas==0.20.3 \
+RUN pip install setuptools==36.2.7 \
+                pandas==0.20.3 \
                 gensim \
                 nltk \
                 stop-words \
@@ -40,8 +42,9 @@ RUN pip install pandas==0.20.3 \
                 ruamel.yaml==0.14.11 \
                 scikit-optimize==0.3 \
                 pyemd==0.4.2 \
-                rep==0.6.6 \
-                sacred==0.7.0
+                sacred==0.7.0 \
+                lightgbm==2.0.3
+
 
 RUN chmod -R 777 /usr/local/lib/python3.6/site-packages
 RUN chmod -R 777 /usr/local/lib/python3.6/site-packages/spacy
