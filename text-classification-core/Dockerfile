@@ -27,6 +27,7 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
 
 
 RUN pip install setuptools==36.2.7 \
+                joblib==0.11 \  
                 pandas==0.20.3 \
                 gensim \
                 nltk \
