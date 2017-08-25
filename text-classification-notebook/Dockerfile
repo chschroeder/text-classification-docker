@@ -1,4 +1,4 @@
-FROM text-classification-plotting:0.3.3
+FROM text-classification-plotting:0.4.0
 
 USER root
 

@@ -40,7 +40,7 @@ RUN pip install setuptools==36.2.7 \
                 psutil==5.2.2 \
                 memory_profiler==0.45 \
                 ruamel.yaml==0.14.11 \
-                scikit-optimize==0.3 \
+                scikit-optimize==0.4 \
                 pyemd==0.4.2 \
                 sacred==0.7.0 \
                 lightgbm==2.0.3
