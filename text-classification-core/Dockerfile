@@ -33,7 +33,7 @@ RUN pip install setuptools==36.2.7 \
                 nltk \
                 stop-words \
                 PyStemmer \
-                scikit-learn==0.18.1 \
+                scikit-learn==0.19.0 \
                 bayesian-optimization \
                 pyxDamerauLevenshtein \
                 spacy==1.7.5 \
