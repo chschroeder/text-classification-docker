@@ -1,4 +1,5 @@
-FROM text-classification-plotting:0.4.1
+ARG VERSION=latest
+FROM chschroeder/text-classification-plotting:${VERSION}
 
 USER root
 

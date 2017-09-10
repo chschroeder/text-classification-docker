@@ -1,4 +1,7 @@
-FROM text-classification-core:0.4.1
+ARG VERSION=latest
+FROM chschroeder/text-classification-core:${VERSION}
+
+RUN echo $VERSION
 
 USER root
 
