@@ -43,8 +43,8 @@ RUN pip install setuptools==36.2.7 \
                 ruamel.yaml==0.14.11 \
                 scikit-optimize==0.4 \
                 pyemd==0.4.2 \
-                sacred==0.7.0 \
-                lightgbm==2.0.3
+                sacred==0.7.1 \
+                lightgbm==2.0.7
 
 
 RUN chmod -R 777 /usr/local/lib/python3.6/site-packages
