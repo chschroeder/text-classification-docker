@@ -6,19 +6,26 @@ RUN useradd -ms /bin/bash ${CORE_USER}
 
 USER root
 
-RUN pip install numpy \
-        scipy
-
 RUN apt-get update \ 
     && apt-get install -y --no-install-recommends \
         git \
         make \
+        cmake \
         g++ \
         gcc \
+        gfortran \
         build-essential \
-        python-dev \
+        libatlas-base-dev \
+        libblas3 \
+        libopenblas-dev \
+        liblapack-dev \
+        cython \
         python3-dev \
         libyaml-dev
+
+RUN pip install --upgrade pip  \
+    && pip install numpy==1.13.3 \
+    && pip install scipy==1.0.0
 
 RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd xgboost \
@@ -29,13 +36,11 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
 RUN pip install setuptools==36.2.7 \
                 joblib==0.11 \  
                 pandas==0.20.3 \
-                gensim \
-                nltk \
+                gensim==3.1.0 \
+                nltk==3.2.5 \
                 stop-words \
-                PyStemmer \
+                PyStemmer==1.3.0 \
                 scikit-learn==0.19.0 \
-                bayesian-optimization \
-                pyxDamerauLevenshtein \
                 spacy==1.7.5 \
                 datasketch==1.2.0 \
                 psutil==5.2.2 \
