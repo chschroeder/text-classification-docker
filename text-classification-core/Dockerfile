@@ -25,7 +25,8 @@ RUN apt-get update \
 
 RUN pip install --upgrade pip  \
     && pip install numpy==1.13.3 \
-    && pip install scipy==1.0.0
+    && pip install scipy==1.0.0 \
+    && pip install pybind11==2.2.1
 
 RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd xgboost \
@@ -46,7 +47,8 @@ RUN pip install setuptools==36.2.7 \
                 psutil==5.2.2 \
                 memory_profiler==0.45 \
                 ruamel.yaml==0.14.11 \
-                scikit-optimize==0.4 \
+                # will be set back to plain pip install once the next release is done
+                git+https://github.com/scikit-optimize/scikit-optimize.git \
                 pyemd==0.4.2 \
                 sacred==0.7.1 \
                 lightgbm==2.0.7
