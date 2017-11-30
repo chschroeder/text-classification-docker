@@ -30,6 +30,7 @@ RUN pip install --upgrade pip  \
 
 RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd xgboost \
+    && git reset --hard 602b34ab914da7830d632ca8079ebffc3bd608f0 \
     && make -j4 \
     && cd python-package; python setup.py install
 
