@@ -36,6 +36,7 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
 
 
 RUN pip install setuptools==36.2.7 \
+                pytest==3.3.0 \
                 joblib==0.11 \  
                 pandas==0.20.3 \
                 gensim==3.1.0 \
