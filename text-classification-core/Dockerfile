@@ -55,6 +55,9 @@ RUN pip install setuptools==36.2.7 \
                 sacred==0.7.1 \
                 lightgbm==2.0.7
 
+RUN git clone https://github.com/facebookresearch/fastText.git \
+    && cd fastText \
+    && pip install .
 
 RUN chmod -R 777 /usr/local/lib/python3.6/site-packages
 RUN chmod -R 777 /usr/local/lib/python3.6/site-packages/spacy
