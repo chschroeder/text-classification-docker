@@ -43,7 +43,7 @@ RUN pip install setuptools==36.2.7 \
                 nltk==3.2.5 \
                 stop-words \
                 PyStemmer==1.3.0 \
-                scikit-learn==0.19.0 \
+                scikit-learn==0.19.1 \
                 spacy==1.7.5 \
                 datasketch==1.2.0 \
                 psutil==5.2.2 \
