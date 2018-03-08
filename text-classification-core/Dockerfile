@@ -38,7 +38,7 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
 RUN pip install setuptools==36.2.7 \
                 pytest==3.3.0 \
                 joblib==0.11 \  
-                pandas==0.20.3 \
+                pandas==0.22.0 \
                 gensim==3.1.0 \
                 nltk==3.2.5 \
                 stop-words \
@@ -49,11 +49,10 @@ RUN pip install setuptools==36.2.7 \
                 psutil==5.2.2 \
                 memory_profiler==0.45 \
                 ruamel.yaml==0.14.11 \
-                # will be set back to plain pip install once the next release is done
-                git+https://github.com/scikit-optimize/scikit-optimize.git \
+                scikit-optimize==0.5.1 \
                 pyemd==0.4.2 \
-                sacred==0.7.1 \
-                lightgbm==2.0.7
+                sacred==0.7.2 \
+                lightgbm==2.0.11
 
 RUN git clone https://github.com/facebookresearch/fastText.git \
     && cd fastText \

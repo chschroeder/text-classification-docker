@@ -5,7 +5,7 @@ USER root
 
 RUN apt-get install -y --no-install-recommends python-matplotlib
 
-RUN pip install notebook==5.0.0
+RUN pip install notebook==5.4.0
 
 USER primo
 
