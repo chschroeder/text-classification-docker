@@ -39,7 +39,7 @@ RUN pip install setuptools==36.2.7 \
                 pytest==3.3.0 \
                 joblib==0.11 \  
                 pandas==0.22.0 \
-                gensim==3.1.0 \
+                gensim==3.4.0 \
                 nltk==3.2.5 \
                 stop-words \
                 PyStemmer==1.3.0 \
