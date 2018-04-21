@@ -52,7 +52,7 @@ RUN pip install setuptools==36.2.7 \
                 scikit-optimize==0.5.1 \
                 pyemd==0.4.2 \
                 sacred==0.7.2 \
-                lightgbm==2.0.11
+                lightgbm==2.1.0
 
 RUN git clone https://github.com/facebookresearch/fastText.git \
     && cd fastText \
